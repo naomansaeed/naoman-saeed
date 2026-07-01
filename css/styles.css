@@ -1,5 +1,26 @@
+/* --- LAYOUT: NAVBAR & HERO --- */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body{
+    line-height: 1.5;
+}
+/* Make the navbar float over the hero */
+.site-header {
+    position: absolute;
+}
 /* --- VARIABLES --- */
 
 /* --- TYPOGRAPHY --- */
-
-/* --- LAYOUT --- */
