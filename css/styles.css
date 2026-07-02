@@ -101,7 +101,27 @@ html {
 }
 
 body{
-    line-height: 1.5;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Smooth focus transitions for accessibility */
+:focus-visible {
+    transition: outline-offset var(--transition-fast);
 }
 
 /* --- ACCESSIBILITY --- */
@@ -127,13 +147,15 @@ body{
 
 /* floating navbar */
 .site-header {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 100;
     padding: var(--spacing-lg) var(--spacing-xl);
-    background: transparent;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
 }
 
 .navbar {
@@ -149,14 +171,14 @@ body{
     font-family: var(--font-heading);
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--color-surface);
+    color: var(--color-text);
     text-decoration: none;
     transition: opacity var(--transition-fast);
 }
 
 .logo:hover,
 .logo:focus-visible {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .nav-links {
@@ -171,20 +193,22 @@ body{
     font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-surface);
+    color: var(--color-text);
     text-decoration: none;
     padding: var(--spacing-sm);
-    transition: opacity var(--transition-fast);
+    transition: color var(--transition-fast);
     border-radius: var(--radius-sm);
 }
 
 .nav-links a:hover,
 .nav-links a:focus-visible {
-    opacity: 0.8;
+   /* opacity: 0.8; */
+   color: var(--color-primary);
 }
 
 .nav-links a[aria-current="page"] {
-    border-bottom: 2px solid var(--color-surface);
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
 }
 
 /* Hero section */
@@ -197,6 +221,8 @@ body{
     justify-content: center;
     text-align: center;
     color: var(--color-surface);
+    margin-top: -4.5rem;
+    padding: 4.5rem;
     /* Background is a gradient*/
     background: linear-gradient(
         135deg,
