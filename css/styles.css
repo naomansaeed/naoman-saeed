@@ -1339,6 +1339,13 @@ section {
     min-height: 37.5rem;
 }
 
+.loading-notice {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+}
+
 /* ============================================
    ERROR PAGE
    ============================================ */
