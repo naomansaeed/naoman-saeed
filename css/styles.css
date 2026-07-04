@@ -208,7 +208,7 @@ a:focus-visible {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 75rem;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -959,6 +959,50 @@ section {
     border: 2px dashed var(--color-border);
     border-radius: var(--radius-lg);
     color: var(--color-text-muted);
+}
+
+/* Qualification Form */
+.qualification-form {
+    max-width: 40rem;
+    margin: var(--spacing-xl) auto 0;
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color var(--transition-fast);
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.qualification-form .btn {
+    width: 100%;
+    margin-top: var(--spacing-md);
 }
 
 /* ============================================

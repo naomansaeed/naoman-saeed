@@ -138,25 +138,68 @@
             </div>
         </section>
 
-        <!-- Qualification Quiz -->
-        <section class="quiz-section" aria-labelledby="quiz-heading">
-            <div class="container">
-                <h2 id="quiz-heading">Let's See If We're a Fit</h2>
-                <p>I take on a maximum of <strong>3 new builds per month</strong> to ensure every client gets my absolute best craft. Please fill out the brief questionnaire below. If we're a match, you'll instantly unlock my calendar to book a discovery call.</p>
-                
-                <div class="embed-container">
-                    <!-- Tally.so embed goes here -->
-                    <!-- Example: <iframe data-tally-src="..." loading="lazy" ...></iframe> -->
-                    <p class="embed-placeholder">[ Tally.so quiz will be embedded here ]</p>
-                </div>
+        
+                    <!-- Qualification Quiz -->
+<section class="quiz-section" aria-labelledby="quiz-heading">
+    <div class="container">
+        <h2 id="quiz-heading">Let's See If We're a Fit</h2>
+        <p>I take on a maximum of <strong>3 new builds per month</strong> to ensure every client gets my absolute best craft. Please fill out the brief questionnaire below. If we're a match, you'll instantly unlock my calendar to book a discovery call.</p>
+        
+        <form id="qualification-form" class="qualification-form" data-netlify="true">
+            <div class="form-group">
+                <label for="platform">What platform is your current website built on?</label>
+                <select id="platform" name="platform" required>
+                    <option value="">Select one...</option>
+                    <option value="squarespace">Squarespace / Wix / Weebly</option>
+                    <option value="wordpress">WordPress</option>
+                    <option value="shopify">Shopify</option>
+                    <option value="custom">Custom / Hand-coded</option>
+                    <option value="none">I don't have a website yet</option>
+                </select>
             </div>
-        </section>
+
+            <div class="form-group">
+                <label for="timeline">When are you looking to launch?</label>
+                <select id="timeline" name="timeline" required>
+                    <option value="">Select one...</option>
+                    <option value="30days">Within the next 30 days</option>
+                    <option value="1-3months">1 to 3 months</option>
+                    <option value="3-6months">3 to 6 months</option>
+                    <option value="exploring">Just exploring</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="budget">What is your allocated investment?</label>
+                <select id="budget" name="budget" required>
+                    <option value="">Select one...</option>
+                    <option value="under750">Under $750</option>
+                    <option value="750-1500">$750 – $1,500</option>
+                    <option value="1500-3000">$1,500 – $3,000</option>
+                    <option value="3000+">$3,000+</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="assets">Do you have your final branding, copywriting, and photography ready?</label>
+                <select id="assets" name="assets" required>
+                    <option value="">Select one...</option>
+                    <option value="yes">Yes, everything is finalized</option>
+                    <option value="most">I have most things</option>
+                    <option value="no">No, starting from scratch</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Check My Eligibility</button>
+        </form>
+    </div>
+</section>
 
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Naoman. Crafted with raw HTML & CSS.</p>
+            <p>© <span id="current-year">2026</span> Naoman. Crafted with raw HTML & CSS.</p>
             <a href="https://trogdyne.com" target="_blank" rel="noopener noreferrer">Read the Technical Journal</a>
         </div>
     </footer>
