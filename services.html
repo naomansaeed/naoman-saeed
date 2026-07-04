@@ -145,7 +145,11 @@
         <h2 id="quiz-heading">Let's See If We're a Fit</h2>
         <p>I take on a maximum of <strong>3 new builds per month</strong> to ensure every client gets my absolute best craft. Please fill out the brief questionnaire below. If we're a match, you'll instantly unlock my calendar to book a discovery call.</p>
         
-        <form id="qualification-form" class="qualification-form" data-netlify="true">
+        <form id="qualification-form" class="qualification-form" name="qualification" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="qualification">
+            <p class="visually-hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+    </p>
             <div class="form-group">
                 <label for="platform">What platform is your current website built on?</label>
                 <select id="platform" name="platform" required>
