@@ -51,3 +51,28 @@ const yearElement = document.getElementById('current-year');
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
+
+// Lead Magnet Form Logic - Submit to Netlify then redirect
+const leadMagnetForm = document.querySelector('form[name="lead-magnet"]');
+
+if (leadMagnetForm) {
+    leadMagnetForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(leadMagnetForm);
+        
+        // Submit to Netlify Forms
+        try {
+            await fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            });
+        } catch (error) {
+            console.error('Form submission error:', error);
+        }
+        
+        // Redirect to download page
+        window.location.href = '/download.html';
+    });
+}
